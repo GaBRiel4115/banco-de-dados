@@ -163,14 +163,38 @@ from alunos;
 
 -- procurar uma string dentro de um campo texto
 select * from alunos;
--- 'Os pokemons salvaram o mundo'
+-- 'Rodrigo'
 
--- 'pokemon'
 select * from alunos
 where
-nome like '%Ro';
+nome like '%Ro%';
 
--- caracter curinga %
+-- caracter curinga / Ro% Começando em 'Ro'  / %Go Terminado em 'Go'  / %Ro% EM QUALQUER CARACTER
+
+
+-- _ 1 caracter // caracter coringa
+
+--  SELECT 'RICARDO NEVES' like 'Ri%';
+-- select * from alunos
+-- where
+-- nome like '_N%';
+
+
+select * from alunos 
+where
+idade between 20 and 60;
+
+select * from alunos
+where
+nascimento between '2001-06-04' and '2022-03-08';
+
+-- ALIAS é um apelido
+select 1+1 AS SOMA;
+
+select concat('André' , ' Neves');
+
+
+
 
 
 
