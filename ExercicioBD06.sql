@@ -84,5 +84,8 @@ where alunos.nome = 'André Neves';
 
 
 -- 4) Retornar todas as turmas dos alunos que tenham nascido depois de 2001
-select turmas.nome,
-alunos.nome
+select distinct turmas.nome
+from turmas
+inner join aluno_turma on turmas.id = aluno_turma.aluno_id
+inner join alunos on alunos.id = aluno_turma.turma_id
+where alunos.nascimento > 2001;
